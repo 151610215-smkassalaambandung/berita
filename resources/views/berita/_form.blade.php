@@ -9,7 +9,7 @@
 <div class="form-group{!! $errors->has('kategori_id') ? 'has-error' : '' !!}">
 	{!! Form::label('kategori_id','Kategori Berita',['class'=>'col-md-2 control-label']) !!}
 	<div class="col-md-4">
-		{!! Form::select('kategori_id',[''=>'']+App\Kategori::pluck('name','id')->all(), null) !!}
+		{!! Form::select('kategori_id',[''=>'']+App\Kategori::pluck('name','id')->all(), null,['class'=>'js-selectize','placeholder'=>'pilih kategori']) !!}
 		{!! $errors->first('kategori_id','<p class="help-block">:message</p>') !!}
 	</div>
 </div>

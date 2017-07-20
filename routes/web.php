@@ -19,6 +19,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::group(['prefix'=>'admin','middleware'=>['auth','role:admin']],function(){
- Route::resource('kategoris','kategoriController');
- Route::resource('berita','BeritasController');
-});
+Route::resource('kategoris','kategoriController');
+Route::resource('berita','BeritasController');
+//  Route::get('berita/{berita}/borrow',[
+//  		'middleware'=>['auth','role:member'],
+//  		'as' =>'guest.berita.borrow',
+//  		'uses' =>'BeritasController@borrow']);
+// });

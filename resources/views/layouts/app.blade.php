@@ -16,6 +16,8 @@
     <link href="{{asset('/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('/css/jquery.dataTables.css')}}" rel="stylesheet">
     <link href="{{asset('/css/dataTables.bootstrap.css')}}" rel="stylesheet">
+    <link href="{{asset('/css/selectize.css')}}" rel="stylesheet">
+    <link href="{{asset('/css/selectize.bootstrap3.css')}}" rel="stylesheet">
 
     <!-- Scripts -->
     <script>
@@ -27,7 +29,7 @@
 <body>
 <style>
     body {
-        background-image: url({{asset('mkm')}});
+        background-image: url({{asset('img/')}});
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
@@ -82,8 +84,7 @@
                                     <li>
                                         <a href="{{ url('/logout') }}"
                                             onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
+                                                     document.getElementById('logout-form').submit();">Logout
                                         </a>
 
                                         <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
@@ -104,7 +105,7 @@
     <!-- Scripts -->
     <script src="{{asset('/js/app.js')}}"></script>
      <script src="{{asset('/js/jquery-3.1.0.min.js')}}"></script>
-      <script src="{{asset('/js/bootstrap.min.js')}}"></script>
+     <!--  <script src="{{asset('/js/bootstrap.min.js')}}"></script> -->
       <script src="{{asset('/js/jquery.dataTables.min.js')}}"></script>
       <script src="{{asset('/js/dataTables.bootstrap.min.js')}}"></script>
       @yield('scripts')
